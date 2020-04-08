@@ -6,3 +6,20 @@
   <span>{{ isi.name }}</span>
   <span>{{ isi.price | currency }}</span>
 </div>
+
+<form [formGroup]="checkForm" (ngSubmit)="submit(checkForm.value)">
+    <div>
+        <label for="name">
+            Nama
+        </label>
+        <input type="text" id="name" formControlName="name">
+    </div>
+
+    <div>
+        <label for="address">
+            Alamat
+        </label>
+        <input type="text" id="address" formControlName="address">
+    </div>
+  <button class="button" type="submit">Purchase</button>
+</form>
